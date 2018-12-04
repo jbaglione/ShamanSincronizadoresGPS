@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+    <binding digest="System.ServiceModel.Configuration.BasicHttpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;OdcMedicoWebServiceSoap&quot; /&gt;" bindingType="basicHttpBinding" name="OdcMedicoWebServiceSoap" />
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://www.medendi.com.ar:84/odcmedico.asmx&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;OdcMedicoWebServiceSoap&quot; contract=&quot;WSOjos.OdcMedicoWebServiceSoap&quot; name=&quot;OdcMedicoWebServiceSoap&quot; /&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://www.medendi.com.ar:84/odcmedico.asmx&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;OdcMedicoWebServiceSoap&quot; contract=&quot;WSOjos.OdcMedicoWebServiceSoap&quot; name=&quot;OdcMedicoWebServiceSoap&quot; /&gt;" contractName="WSOjos.OdcMedicoWebServiceSoap" name="OdcMedicoWebServiceSoap" />
+  </endpoints>
+</configurationSnapshot>

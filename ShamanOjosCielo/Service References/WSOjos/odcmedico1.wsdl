@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.lineasodc.com.ar/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.lineasodc.com.ar/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.lineasodc.com.ar/">
+      <s:element name="GetMovilesCercanos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firma" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="time" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="latitud" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="longitud" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="maxCantidadATraer" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMovilesCercanosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMovilesCercanosResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HashPing">
+        <s:complexType />
+      </s:element>
+      <s:element name="HashPingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HashPingResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPosicionMovil">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firma" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="time" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="movil" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPosicionMovilResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPosicionMovilResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPosicionMoviles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firma" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="time" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPosicionMovilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPosicionMovilesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCambioEstado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firma" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="time" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="movil" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nivel1" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nivel2" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="empleados">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="descripciones">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCambioEstadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetCambioEstadoResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCambioZona">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firma" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="time" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="movil" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zonas">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetCambioZonaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetCambioZonaResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetMovilesCercanosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMovilesCercanos" />
+  </wsdl:message>
+  <wsdl:message name="GetMovilesCercanosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMovilesCercanosResponse" />
+  </wsdl:message>
+  <wsdl:message name="HashPingSoapIn">
+    <wsdl:part name="parameters" element="tns:HashPing" />
+  </wsdl:message>
+  <wsdl:message name="HashPingSoapOut">
+    <wsdl:part name="parameters" element="tns:HashPingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPosicionMovilSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPosicionMovil" />
+  </wsdl:message>
+  <wsdl:message name="GetPosicionMovilSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPosicionMovilResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPosicionMovilesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPosicionMoviles" />
+  </wsdl:message>
+  <wsdl:message name="GetPosicionMovilesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPosicionMovilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetCambioEstadoSoapIn">
+    <wsdl:part name="parameters" element="tns:SetCambioEstado" />
+  </wsdl:message>
+  <wsdl:message name="SetCambioEstadoSoapOut">
+    <wsdl:part name="parameters" element="tns:SetCambioEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetCambioZonaSoapIn">
+    <wsdl:part name="parameters" element="tns:SetCambioZona" />
+  </wsdl:message>
+  <wsdl:message name="SetCambioZonaSoapOut">
+    <wsdl:part name="parameters" element="tns:SetCambioZonaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OdcMedicoWebServiceSoap">
+    <wsdl:operation name="GetMovilesCercanos">
+      <wsdl:input message="tns:GetMovilesCercanosSoapIn" />
+      <wsdl:output message="tns:GetMovilesCercanosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HashPing">
+      <wsdl:input message="tns:HashPingSoapIn" />
+      <wsdl:output message="tns:HashPingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPosicionMovil">
+      <wsdl:input message="tns:GetPosicionMovilSoapIn" />
+      <wsdl:output message="tns:GetPosicionMovilSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPosicionMoviles">
+      <wsdl:input message="tns:GetPosicionMovilesSoapIn" />
+      <wsdl:output message="tns:GetPosicionMovilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCambioEstado">
+      <wsdl:input message="tns:SetCambioEstadoSoapIn" />
+      <wsdl:output message="tns:SetCambioEstadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetCambioZona">
+      <wsdl:input message="tns:SetCambioZonaSoapIn" />
+      <wsdl:output message="tns:SetCambioZonaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OdcMedicoWebServiceSoap" type="tns:OdcMedicoWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMovilesCercanos">
+      <soap:operation soapAction="http://www.lineasodc.com.ar/GetMovilesCercanos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HashPing">
+      <soap:operation soapAction="http://www.lineasodc.com.ar/HashPing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPosicionMovil">
+      <soap:operation soapAction="http://www.lineasodc.com.ar/GetPosicionMovil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPosicionMoviles">
+      <soap:operation soapAction="http://www.lineasodc.com.ar/GetPosicionMoviles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCambioEstado">
+      <soap:operation soapAction="http://www.lineasodc.com.ar/SetCambioEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCambioZona">
+      <soap:operation soapAction="http://www.lineasodc.com.ar/SetCambioZona" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OdcMedicoWebServiceSoap12" type="tns:OdcMedicoWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMovilesCercanos">
+      <soap12:operation soapAction="http://www.lineasodc.com.ar/GetMovilesCercanos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HashPing">
+      <soap12:operation soapAction="http://www.lineasodc.com.ar/HashPing" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPosicionMovil">
+      <soap12:operation soapAction="http://www.lineasodc.com.ar/GetPosicionMovil" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPosicionMoviles">
+      <soap12:operation soapAction="http://www.lineasodc.com.ar/GetPosicionMoviles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCambioEstado">
+      <soap12:operation soapAction="http://www.lineasodc.com.ar/SetCambioEstado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetCambioZona">
+      <soap12:operation soapAction="http://www.lineasodc.com.ar/SetCambioZona" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OdcMedicoWebService">
+    <wsdl:port name="OdcMedicoWebServiceSoap" binding="tns:OdcMedicoWebServiceSoap">
+      <soap:address location="http://www.medendi.com.ar:84/odcmedico.asmx" />
+    </wsdl:port>
+    <wsdl:port name="OdcMedicoWebServiceSoap12" binding="tns:OdcMedicoWebServiceSoap12">
+      <soap12:address location="http://www.medendi.com.ar:84/odcmedico.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
