@@ -161,10 +161,15 @@ namespace ShamanOjosDelCieloService
                         myKey = "r4str34nd0ok";
                         myIp = "palabra3";
                         break;
-                    default:
-                        empresa = "medicalexpress";
-                        myKey = "r4str34nd0ok";
+                    case "23859 42806":
+                        empresa = "doctored";
+                        myKey = "c3res4stre2t";
                         myIp = "palabra3";
+                        break;
+                    default:
+                        empresa = "";
+                        myKey = "";
+                        myIp = "";
                         break;
                 }
 

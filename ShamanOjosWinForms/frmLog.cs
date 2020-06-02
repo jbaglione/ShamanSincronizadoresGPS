@@ -154,12 +154,17 @@ namespace ShamanOjosWinForms
                         myKey = "r4str34nd0ok";
                         myIp = "palabra3";
                         break;
-                    default:
-                        empresa = "medicalexpress";
-                        myKey = "r4str34nd0ok";
+                    case "23859 42806":
+                        empresa = "doctored";
+                        myKey = "c3res4stre2t";
                         myIp = "palabra3";
                         break;
-                }
+                    default:
+                        empresa = "";
+                        myKey = "";
+                        myIp = "";
+                        break;
+                //}
 
                 /* Armo Firma */
                 string myFechaHora = DateTime.Now.ToString("yyyyMMdd HH:mm:ss:fff");
@@ -167,7 +172,7 @@ namespace ShamanOjosWinForms
                 string myFirma = Firmar(myIp, myKey, myFechaHora);
 
                 /* GPS Activos */
-                addLog(true, "ReadGPSDevices", "Obtengo móviles activos", true);
+                addLog(true, "ReadGPSDevices", "Obtengo móviles activos");
 
                 WSOjos.OdcMedicoWebServiceSoapClient gpsWS = new WSOjos.OdcMedicoWebServiceSoapClient();
 

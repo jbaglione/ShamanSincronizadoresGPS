@@ -56,8 +56,9 @@ namespace ShamanPuntaTrackingNoShaman
             ///*------> Conecto a DB <---------*/
             //if (this.setConexionDB())
             //{
-                /*------> Proceso <--------*/
-                this.ReadGPSDevices();
+            /*------> Proceso <--------*/
+            addLog(true, "ElapsedHandler()", "Inicio");
+            this.ReadGPSDevices();
             //}
         }
 
@@ -143,6 +144,7 @@ namespace ShamanPuntaTrackingNoShaman
         {
             try
             {
+
                 // Obtengo Dirección IP
                 string myIp = this.getMyIp();
                 string myKey = "";
@@ -170,6 +172,7 @@ namespace ShamanPuntaTrackingNoShaman
                         break;
                 }
 
+                addLog(true, "ReadGPSDevices()", "Pre - Armo Firma");
                 /* Armo Firma */
                 string myFechaHora = DateTime.Now.ToString("yyyyMMdd HH:mm:ss:fff");
                 string myFirma = Firmar(myIp, myKey, myFechaHora);
@@ -196,12 +199,13 @@ namespace ShamanPuntaTrackingNoShaman
                     //                       { ...}]
                     //}
 
+                    addLog(true, "ReadGPSDevices", "Pre - JsonValue.Parse(response)");
                     var jsonObject = JsonValue.Parse(response);
                     conMoviles objMovilesMaster = new conMoviles();
 
                     if (jsonObject.ContainsKey("result"))
                     {
-
+                        addLog(true, "ReadGPSDevices", "Post - jsonObject.ContainsKey('result')");
                         JsonArray jsonArrayResult = (JsonArray)JsonValue.Parse(jsonObject["result"].ToString());
 
                         var jsonObjectAux = JsonValue.Parse(responseAux);
